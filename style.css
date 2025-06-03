@@ -1,0 +1,50 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;          /* Remove margens padrão */
+    padding: 0;         /* Remove paddings padrão */
+    box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho do elemento */
+}
+
+/* Estilos para o corpo da página */
+body {
+    min-width: 100vh;    /* Altura mínima da viewport */
+    display: flex;       /* Ativa o modelo flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha itens no topo */
+    background: #283747; /* Cor de fundo azul escuro */
+    font-family: sans-serif; /* Fonte sem serifa */
+}
+
+/* Estilos para a lista não ordenada */
+ul {
+    color: white;        /* Cor do texto branco */
+    display: flex;       /* Layout flex para os itens da lista */
+    gap: 3.5rem;        /* Espaçamento entre os itens da lista */
+    font-size: 30px;     /* Tamanho da fonte */
+    list-style: none;    /* Remove marcadores de lista */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    margin-top: 13rem;   /* Margem superior para posicionamento */
+}
+
+/* Estilos para os itens da lista */
+li {
+    transition: 500ms ease; /* Transição suave de 500ms para todas propriedades */
+    text-transform: uppercase; /* Transforma texto em maiúsculas */
+    cursor: pointer;     /* Muda cursor para pointer ao passar o mouse */
+}
+
+/* Efeito quando a lista inteira recebe hover */
+ul:hover li {
+    filter: blur(5px);   /* Aplica desfoque de 5px em todos os itens */
+}
+
+/* Efeito quando um item específico recebe hover */
+ul li:hover {
+    filter: blur(0);     /* Remove o desfoque */
+    transform: scale(1.10); /* Aumenta o tamanho em 10% */
+    /* Cria um gradiente de cor no texto */
+    background: linear-gradient(90deg, #16BFFD, #CB6066);
+    background-clip: text; /* Aplica o gradiente apenas ao texto */
+    -webkit-background-clip: text; /* Versão para navegadores WebKit */
+    -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente para mostrar o gradiente */
+}
